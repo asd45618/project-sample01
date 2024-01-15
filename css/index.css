@@ -96,6 +96,61 @@ body {
   background: #f9f9fb;
 }
 
+#section .slideOuter .slideInner {
+  position: relative;
+}
+
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+  margin: 0 auto;
+}
+
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#section .slideOuter .slideInner ul.slick-dots li button {
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-indent: 100px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease-in;
+}
+
+#section .slideOuter .slideInner ul.slick-dots li.slick-active > button {
+  background: #f00;
+  width: 50px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
 #section .slide {
   /* 자식이 부모를 기준으로 배치될때 부모한테 주는 속성 */
   position: relative;
