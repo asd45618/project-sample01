@@ -6,7 +6,7 @@
     <title>로그인|회사명</title>
     <meta name="keywords" content="모바일 | TV | 가전 | IT" />
     <meta name="description" content="모바일 | TV | 가전 | IT" />
-    <meta name="author" content="김은영" />
+    <meta name="author" content="김광명" />
     <meta name="thumbnail" content="" alt="" />
 
     <!-- sns 대표이미지, 사이트제목, 키워드 표시(500*500)  -->
@@ -21,11 +21,12 @@
 
     <!-- 파비콘(32*32) -->
     <link rel="shortcut icon" href="파비콘이미지경로(확장자는 ico, png 가능)" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -34,6 +35,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
@@ -42,8 +45,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </head>
   <body>
@@ -109,6 +114,9 @@
               <a href="#">자세히보기</a>
             </div>
           </div>
+        </div>
+        <div class="plapau">
+          <i class="fa-solid fa-pause"></i>
         </div>
       </div>
       <div class="business">
@@ -196,6 +204,8 @@
 
     <script>
       $(".slideInner").slick({
+        autoplaySpeed: 4000,
+        speed: 300,
         autoplay: true,
         dots: true,
         arrows: true,
@@ -203,6 +213,20 @@
           '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow:
           '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa-solid fa-chevron-right"></i></button>',
+      });
+
+      $(".slideOuter .plapau i").on("click", function () {
+        if ($(this).hasClass("fa-pause")) {
+          $(".slideInner").slick("slickPause");
+          $(".slideOuter .plapau i")
+            .removeClass("fa-pause")
+            .addClass("fa-play");
+        } else {
+          $(".slideInner").slick("slickPlay");
+          $(".slideOuter .plapau i")
+            .removeClass("fa-play")
+            .addClass("fa-pause");
+        }
       });
     </script>
   </body>
