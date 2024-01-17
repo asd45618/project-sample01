@@ -7,6 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -42,10 +49,25 @@ body {
   width: 100%;
   z-index: 99; /* 박스겹침이 발생했을때 겹치는 순서를 제어함. 높은값이 위로 올라옴 */
 }
+
 #header h1 {
   float: left;
   padding: 20px 0;
 }
+
+#header h1 a {
+  display: block;
+  width: 250px;
+  height: 50px;
+  background: url("../image/워드프레스\ 기업홈페이지1\ 로고.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#header .menuOpen {
+  display: none;
+}
+
 #header #nav {
   float: right;
 }

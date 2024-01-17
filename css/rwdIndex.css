@@ -1,0 +1,105 @@
+@media screen and (max-width: 1289px) {
+  .row {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #header {
+    background: rgba(255, 255, 255, 1);
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99; /* 박스겹침이 발생했을때 겹치는 순서를 제어함. 높은값이 위로 올라옴 */
+  }
+
+  #header .row {
+    padding: 0;
+  }
+
+  #header h1 {
+    float: left;
+    padding: 20px 0 20px 10px;
+  }
+
+  #header h1 a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    background: url("../image/logo_black.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #header .menuOpen {
+    display: block;
+    float: right;
+    font-size: 25px;
+    height: 90px;
+    line-height: 90px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  #header #nav {
+    float: right;
+    width: 100%;
+    /* 자바스크립트 액션으로 표시/감춤 */
+    display: block;
+  }
+
+  #header #nav .depth1 > li {
+    float: none;
+    margin-left: 0;
+    color: #4a4e57;
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    position: relative;
+    border-top: 0px solid #e2e2e2;
+  }
+
+  #header #nav .depth1 > li:hover {
+    color: #4a4e57;
+    border-color: #e2e2e2;
+    transition: all 0.3s;
+  }
+
+  #header #nav .depth1 > li > a:hover {
+    background: #f9f9fb;
+  }
+
+  #header #nav .depth1 > li > a {
+    display: block;
+    height: auto;
+    line-height: 41px;
+    border-top: 1px solid #e2e2e2;
+    padding-left: 40px;
+  }
+
+  #header #nav .depth2 {
+    position: static;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    border-top: 0px solid #45639d;
+  }
+
+  #header #nav .depth1 > li:hover .depth2 {
+    display: block;
+  }
+
+  #header #nav .depth2 > li > a {
+    display: block;
+    padding: 12px 20px 12px 50px;
+    font-size: 12px;
+    color: #212934;
+    border-top: 1px solid #e2e2e2;
+  }
+
+  #header #nav .depth2 > li > a:hover {
+    background: #f9f9fb;
+  }
+}
